@@ -12,33 +12,34 @@ It supports duplicate detection, invalid-record rejection, late-arriving data, i
 ## 2. Architecture
 
 ```text
-             Customer CSV Files
-                     |
-                     v
-              Data Ingestion
-                     |
-                     v
-              Data Validation
-                /        \
-               /          \
-              v            v
-       Valid Records   Rejected Records
-              |            |
-              v            v
-       SQLite Source    Rejected CSV
-       Event Table
-              |
-              v
-       SCD Type 2 Processing
-              |
-              v
-       Customer Dimension
-              |
-              v
-       Data Quality Checks
-              |
-              v
-       Reconciliation Report
+Customer CSV Files
+        |
+        v
+  Data Ingestion
+        |
+        v
+  Data Validation
+     /       \
+    v         v
+Valid       Rejected
+Records     Records
+    |         |
+    v         v
+SQLite     Rejected CSV
+Source
+Events
+    |
+    v
+SCD Type 2 Processing
+    |
+    v
+Customer Dimension
+    |
+    v
+Data Quality Checks
+    |
+    v
+Reconciliation Report
 ```
 
 ## 3. Technology Stack
@@ -127,20 +128,22 @@ Invalid records are written to a rejected-record CSV file with rejection reasons
 
 Existing event IDs are skipped during ingestion to support idempotent loading.
 
+
 ## 7. Installation
 
 Clone the repository:
 
+```bash
 git clone https://github.com/vanaja36/yottaflex-scd2-pipeline.git
 cd yottaflex-scd2-pipeline
-
-python -m pip install -r requirements.txt
+```
 
 Install dependencies:
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
+
 
 ## 8. Run the Pipeline
 
@@ -274,11 +277,14 @@ The reconciliation report compares input records against inserted, skipped, and 
 - Improve large-scale ingestion using chunked processing.
 
 ## 15. Author
-## Author
 
-Vanaja Pandella
+**Vanaja Pandella**
 
 GitHub: https://github.com/vanaja36
+
+Project: Customer Data Pipeline with SCD Type 2
+
 Developed as a data engineering challenge project.
+
 
 **Project:** Customer Data Pipeline with SCD Type 2
