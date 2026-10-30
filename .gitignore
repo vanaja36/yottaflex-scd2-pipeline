@@ -1,0 +1,26 @@
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated rejected records
+data/rejected/
+
+# Generated large benchmark data
+data/input/large_customer_updates.csv
+
+# Editor and OS files
+.vscode/
+.DS_Store
+Thumbs.db

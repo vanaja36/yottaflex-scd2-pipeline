@@ -1,0 +1,8 @@
+customer_id,customer_name,city,effective_date,event_id
+C201,Ravi,Hyderabad,2026-01-01,T001
+C202,Priya,Vijayawada,2026-01-02,T002
+C203,Kumar,,2026-01-03,T003
+,Anjali,Chennai,2026-01-04,T004
+C204,Arjun,Bangalore,invalid-date,T005
+
+C205,Keerthi,Hyderabad,2026-04-01,T006
