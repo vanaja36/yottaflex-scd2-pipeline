@@ -9,6 +9,7 @@ The pipeline ingests customer update records from CSV files, validates data qual
 
 It supports duplicate detection, invalid-record rejection, late-arriving data, idempotent transformations, reconciliation, and performance benchmarking.
 
+
 ## 2. Architecture
 
 ```text
@@ -41,6 +42,7 @@ Data Quality Checks
     v
 Reconciliation Report
 ```
+
 
 ## 3. Technology Stack
 
@@ -275,6 +277,7 @@ The reconciliation report compares input records against inserted, skipped, and 
 - Add automated retry and recovery for partial failures.
 - Add cloud deployment and orchestration.
 - Improve large-scale ingestion using chunked processing.
+
 
 ## 15. Author
 
