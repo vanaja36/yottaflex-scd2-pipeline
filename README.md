@@ -131,10 +131,10 @@ Existing event IDs are skipped during ingestion to support idempotent loading.
 
 Clone the repository:
 
-```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd yottaflex_scd2_pipeline
-```
+git clone https://github.com/vanaja36/yottaflex-scd2-pipeline.git
+cd yottaflex-scd2-pipeline
+
+python -m pip install -r requirements.txt
 
 Install dependencies:
 
@@ -274,7 +274,11 @@ The reconciliation report compares input records against inserted, skipped, and 
 - Improve large-scale ingestion using chunked processing.
 
 ## 15. Author
+## Author
 
+Vanaja Pandella
+
+GitHub: https://github.com/vanaja36
 Developed as a data engineering challenge project.
 
 **Project:** Customer Data Pipeline with SCD Type 2
